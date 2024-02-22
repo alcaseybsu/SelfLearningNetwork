@@ -1,0 +1,20 @@
+# Node connections
+A:S1
+S1:B
+S1:S2
+S2:D
+S2:C
+# End node connections list
+
+# Computer IP and port numbers
+A,10.222.120.224,3000
+B,10.222.120.224,3001
+C,127.0.0.1,3002
+D,127.0.0.1,3003
+# End Computer List
+
+# Different port range for switches
+# Leah is S1
+S1,10.222.109.221,4000
+S2,127.0.0.1,4001
+# End Switch List
