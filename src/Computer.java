@@ -6,13 +6,14 @@ import java.util.*;
 public class Computer {
 
     public static void main(String[] args) {
+        // NAME THROUGH COMMAND LINE
+        //DEFINE REMOTE TO NEW BRANCH
 
         GenerateComputer("A", "10.222.120.224", 3000);
         //GenerateComputer("B", "10.222.120.224", 3001);
     }
 
     private final String name;
-    @SuppressWarnings("unused")
     private final InetAddress Address;
     private final int Port;
 
@@ -51,10 +52,10 @@ public class Computer {
 
         String neighborIP = neighborDataSplit[0];
 
-        System.out.println(neighborIP);
+        //System.out.println(neighborIP);
 
         int neighborPort = Integer.parseInt(neighborDataSplit[1]);
-        System.out.println(neighborPort);
+        //System.out.println(neighborPort);
 
         //---------------------------------------------------
 
@@ -77,13 +78,13 @@ public class Computer {
 
                     // Computer A to Computer B test case
                     //---------------------------------------------------
-                    InetAddress testIp = InetAddress.getByName("10.222.120.224");
-                    int testPort = 3001;
-                    DatagramPacket packet = new DatagramPacket(data, data.length, testIp, testPort);
+                    //InetAddress testIp = InetAddress.getByName("10.222.120.224");
+                    //int testPort = 3001;
+                    //DatagramPacket packet = new DatagramPacket(data, data.length, testIp, testPort);
                     //---------------------------------------------------
 
                     //Computer to switch test case
-                    //DatagramPacket packet = new DatagramPacket(data, data.length, InetAddress.getByName(neighborIP), neighborPort);
+                    DatagramPacket packet = new DatagramPacket(data, data.length, InetAddress.getByName(neighborIP), neighborPort);
 
                     socket.send(packet);
                     System.out.println("Message Sent!\n\n");
@@ -121,4 +122,6 @@ public class Computer {
         }
     }
 }
+
+
 

@@ -1,4 +1,3 @@
-
 //Leah & Cyarina 2/14/2024
 import java.io.IOException;
 import java.net.DatagramPacket;
@@ -6,10 +5,6 @@ import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.util.HashMap;
 import java.util.Map;
-//import java.io.BufferedReader;
-//import java.io.IOException;
-//import java.io.InputStream;
-//import java.io.InputStreamReader;
 
 public class Switch implements Runnable {
     private String name;
@@ -122,5 +117,4 @@ public class Switch implements Runnable {
             System.out.println("Error creating Switch: " + e.getMessage());
         }
     }
-
 }
